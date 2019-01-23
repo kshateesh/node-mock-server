@@ -9,7 +9,6 @@ const rateLimit = require("express-rate-limit");
 
 
 router.use('/api', require('./registeration'));
-router.use(auth.required);
 router.use('/api', require('./users'));
 router.use('/api/projects', require('./projects'));
 

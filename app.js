@@ -39,7 +39,6 @@ if (!isProduction) {
   app.use(errorhandler());
 }
 
-if (isProduction) {
   mongoose.connect('mongodb+srv://atlasUser:atlas123@cluster0-ameac.mongodb.net/test?retryWrites=true', {
     useNewUrlParser: true
   }).then(function () {
@@ -47,7 +46,7 @@ if (isProduction) {
   }).catch(function (err) {
     console.log(err);
   })
-};
+
 
 require('./models/User');
 require('./models/Project');

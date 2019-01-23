@@ -27,7 +27,7 @@ var auth = require('../auth');
     });
 
 });  */
-
+router.use(auth.required);
 router.post('/:projectname/api', async function (req, res, next) {
   console.log("project api")
   User.findById(req.payload.id).then(async function (user) {
